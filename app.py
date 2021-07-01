@@ -1,6 +1,6 @@
 # Dependencies
 from flask import Flask, jsonify
-from flask_sqlalchemy import SQLAlchemy
+# from flask_sqlalchemy import SQLAlchemy
 from os import environ
 
 # Create Flask Instance
