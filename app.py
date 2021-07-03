@@ -110,5 +110,9 @@ def note_postgres():
         })
     return jsonify(data)
 
+@app.route("/api/intra_type_comparison")
+def intra_type():
+    return render_template("intra_type.html")
+
 if __name__ == "__main__":
     app.run(debug=True)
