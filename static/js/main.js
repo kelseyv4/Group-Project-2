@@ -10,9 +10,7 @@ function loadData() {
 }
 
 // function buildChart(data) {
-//     data.forEach((item) => {
-//         atk
-//     })
+//     var dropdown = 
 // }
 
 init()
