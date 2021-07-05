@@ -36,12 +36,12 @@ function buildChart(poke_data) {
         mode: 'markers',
         name: 'Attack',
         marker: {
-          color: 'rgba(156, 165, 196, 0.95)',
+          color: 'rgba(204, 0, 0, 0.50)',
           line: {
             color: 'rgba(156, 165, 196, 1.0)',
             width: 1,
           },
-          symbol: 'circle',
+          symbol: 'diamond-open',
           size: 16
         }
       };
@@ -53,12 +53,12 @@ function buildChart(poke_data) {
         mode: 'markers',
         name: 'Defense',
         marker: {
-          color: 'rgba(156, 165, 196, 0.95)',
+          color: 'rgba(0, 0, 204, .50)',
           line: {
             color: 'rgba(156, 165, 196, 1.0)',
             width: 1,
           },
-          symbol: 'circle',
+          symbol: 'square-open',
           size: 16
         }
       };  
@@ -70,12 +70,12 @@ function buildChart(poke_data) {
         mode: 'markers',
         name: 'Hit Points',
         marker: {
-          color: 'rgba(156, 165, 196, 0.95)',
+          color: 'rgba(0, 204, 0, 0.50)',
           line: {
             color: 'rgba(156, 165, 196, 1.0)',
             width: 1,
           },
-          symbol: 'circle',
+          symbol: 'cross-open',
           size: 16
         }
       };
@@ -87,12 +87,12 @@ function buildChart(poke_data) {
         mode: 'markers',
         name: 'Special Attack',
         marker: {
-          color: 'rgba(156, 165, 196, 0.95)',
+          color: 'rgba(204, 204, 0, 0.50)',
           line: {
             color: 'rgba(156, 165, 196, 1.0)',
             width: 1,
           },
-          symbol: 'circle',
+          symbol: 'star-diamond-open',
           size: 16
         }
       };
@@ -104,12 +104,12 @@ function buildChart(poke_data) {
         mode: 'markers',
         name: 'Special Defense',
         marker: {
-          color: 'rgba(156, 165, 196, 0.95)',
+          color: 'rgba(204, 0, 204, 0.50)',
           line: {
             color: 'rgba(156, 165, 196, 1.0)',
             width: 1,
           },
-          symbol: 'circle',
+          symbol: 'star-square-open',
           size: 16
         }
       };
@@ -121,12 +121,12 @@ function buildChart(poke_data) {
         mode: 'markers',
         name: 'Speed',
         marker: {
-          color: 'rgba(156, 165, 196, 0.95)',
+          color: 'rgba(0, 204, 204, 0.50)',
           line: {
             color: 'rgba(156, 165, 196, 1.0)',
             width: 1,
           },
-          symbol: 'circle',
+          symbol: 'circle-open',
           size: 16
         }
       };
@@ -177,6 +177,12 @@ function buildChart(poke_data) {
     Plotly.newPlot("chart",data,layout)
 
     console.log(atk)
+    console.log(def)
+    console.log(hp)
+    console.log(spatk)
+    console.log(spdef)
+    console.log(spd)
+
     }
 
 // function eventHandler() {
