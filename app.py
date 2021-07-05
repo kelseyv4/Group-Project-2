@@ -114,51 +114,22 @@ def note_postgres():
 def intra_type():
     notes = db.session.query(pokemon)
     data = []
-
-    # for note in notes:
-    #     data.append({
-    #         "against_bug" : note.against_bug,
-    #         "against_dark" : note.against_dark,
-    #         "against_dragon" : note.against_dragon,
-    #         "against_electric" : note.against_electric,
-    #         "against_fairy" : note.against_fairy,
-    #         "against_fight" : note.against_fight,
-    #         "against_fire" : note.against_fire,
-    #         "against_flying" : note.against_flying,
-    #         "against_ghost" : note.against_ghost,
-    #         "against_grass" : note.against_grass,
-    #         "against_ground" : note.against_ground,
-    #         "against_ice" : note.against_ice,
-    #         "against_normal" : note.against_normal,
-    #         "against_poison" : note.against_poison,
-    #         "against_psychic" : note.against_psychic,
-    #         "against_rock" : note.against_rock,
-    #         "against_steel" : note.against_steel,
-    #         "against_water" : note.against_water,
-    #         "attack" : note.attack,
-    #         "base_egg_steps" : note.base_egg_steps,
-    #         "base_happiness" : note.base_happiness,
-    #         "base_total" : note.base_total,
-    #         "defense" : note.defense,
-    #         "experience_growth" : note.experience_growth,
-    #         "height_m" : note.height_m,
-    #         "hp" : note.hp,
-    #         "name" : note.name,
-    #         "percentage_male" : note.percentage_male,
-    #         "pokedex_number" : note.pokedex_number,
-    #         "sp_attack" : note.sp_attack,
-    #         "sp_defense" : note.sp_defense,
-    #         "speed" : note.speed,
-    #         "type1" : note.type1,
-    #         "type2" : note.type2,
-    #         "weight_kg" : note.weight_kg,
-    #         "generation" : note.generation,
-    #         "is_legendary" : note.is_legendary
-    #     })
     
-    # print(data)
-
-    return render_template("intra_type.html")
+    for item in notes:
+        item = {
+            '_id': str(item.pokedex_number),
+            'name': str(item.name),
+            'atk': str(item.attack),
+            'def': str(item.defense),
+            'hp': str(item.hp),
+            'sp_atk': str(item.sp_attack),
+            'sp_def': str(item.sp_defense),
+            'spd': str(item.speed)
+        }
+        data.append(item)
+    
+    
+    return jsonify(data)
 
 if __name__ == "__main__":
     app.run(debug=True)
