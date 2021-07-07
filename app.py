@@ -112,26 +112,7 @@ def note_postgres():
 
 @app.route("/api/intra_type_comparison")
 def intra_type():
-    
-    notes = db.session.query(pokemon)
-    data = []
-    
-    for item in notes:
-        item = {
-            "_id": item.pokedex_number,
-            "name": item.name,
-            "atk": item.attack,
-            "def": item.defense,
-            "hp": item.hp,
-            "sp_atk": item.sp_attack,
-            "sp_def": item.sp_defense,
-            "spd": item.speed,
-            "type1": item.type1,
-            "type2": item.type2
-        }
-        data.append(item)
-    
-    return render_template("intra_type.html", data=data)
+    return render_template("intra_type.html")
 
 if __name__ == "__main__":
     app.run(debug=True)

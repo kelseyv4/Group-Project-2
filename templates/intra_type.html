@@ -74,29 +74,52 @@
           </div> -->
 
           <div class="col">
-            <div class="dropdown">
-              <button class="btn btn-danger dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+            <label for="type">Select Type:</label>
+
+            <select name="type" id="dropdown">
+              <option value="bug">Bug</option>
+              <option value="dark">Dark</option>
+              <option value="dragon">Dragon</option>
+              <option value="electric">Electric</option>
+              <option value="fairy">Fairy</option>
+              <option value="fighting">Fighting</option>
+              <option value="fire">Fire</option>
+              <option value="flying">Flying</option>
+              <option value="ghost">Ghost</option>
+              <option value="grass">Grass</option>
+              <option value="ground">Ground</option>
+              <option value="ice">Ice</option>
+              <option value="normal">Normal</option>
+              <option value="poison">Poison</option>
+              <option value="psychic">Psychic</option>
+              <option value="rock">Rock</option>
+              <option value="steel">Steel</option>
+              <option value="water">Water</option>
+
+            </select>
+            <!-- <div class="dropdown"> -->
+              <!-- <button class="btn btn-danger dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                 Type
               </button>
-              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" onchange="buildChart(this.value)">
-                <li><a class="dropdown-item" value="bug">Bug</li>
-                <li><a class="dropdown-item" value="dark">Dark</li>
-                <li><a class="dropdown-item" value="dragon">Dragon</li>
-                <li><a class="dropdown-item" value="electric">Electric</li>
-                <li><a class="dropdown-item" value="fairy">Fairy</li>
-                <li><a class="dropdown-item" value="fighting">Fighting</li>
-                <li><a class="dropdown-item" value="fire">Fire</li>
-                <li><a class="dropdown-item" value="flying">Flying</li>
-                <li><a class="dropdown-item" value="ghost">Ghost</li>
-                <li><a class="dropdown-item" value="grass">Grass</li>
-                <li><a class="dropdown-item" value="ground">Ground</li>
-                <li><a class="dropdown-item" value="ice">Ice</li>
-                <li><a class="dropdown-item" value="normal">Normal</li>
-                <li><a class="dropdown-item" value="poison">Poison</li>
-                <li><a class="dropdown-item" value="psychic">Psychic</li>
-                <li><a class="dropdown-item" value="rock">Rock</li>
-                <li><a class="dropdown-item" value="steel">Steel</li>
-                <li><a class="dropdown-item" value="water">Water</li>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" >
+                <li><a class="dropdown-item" value="bug" onchange="updateChart(this.value)">Bug</li>
+                <li><a class="dropdown-item" value="dark" onchange="updateChart(this.value)">Dark</li>
+                <li><a class="dropdown-item" value="dragon" onchange="updateChart(this.value)">Dragon</li>
+                <li><a class="dropdown-item" value="electric" onchange="updateChart(this.value)">Electric</li>
+                <li><a class="dropdown-item" value="fairy" onchange="updateChart(this.value)">Fairy</li>
+                <li><a class="dropdown-item" value="fighting" onchange="updateChart(this.value)">Fighting</li>
+                <li><a class="dropdown-item" value="fire" onchange="updateChart(this.value)">Fire</li>
+                <li><a class="dropdown-item" value="flying" onchange="updateChart(this.value)">Flying</li>
+                <li><a class="dropdown-item" value="ghost" onchange="updateChart(this.value)">Ghost</li>
+                <li><a class="dropdown-item" value="grass" onchange="updateChart(this.value)">Grass</li>
+                <li><a class="dropdown-item" value="ground" onchange="updateChart(this.value)">Ground</li>
+                <li><a class="dropdown-item" value="ice" onchange="updateChart(this.value)">Ice</li>
+                <li><a class="dropdown-item" value="normal" onchange="updateChart(this.value)">Normal</li>
+                <li><a class="dropdown-item" value="poison" onchange="updateChart(this.value)">Poison</li>
+                <li><a class="dropdown-item" value="psychic" onchange="updateChart(this.value)">Psychic</li>
+                <li><a class="dropdown-item" value="rock" onchange="updateChart(this.value)">Rock</li>
+                <li><a class="dropdown-item" value="steel" onchange="updateChart(this.value)">Steel</li>
+                <li><a class="dropdown-item" value="water" onchange="updateChart(this.value)">Water</li> -->
               </ul>
             </div>
           </div>
