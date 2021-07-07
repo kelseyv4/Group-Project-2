@@ -16,82 +16,102 @@
     </head>
 
     <body>
-        <nav class="navbar navbar-expand-lg navbar-light bg-info">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#">Pokemon Dream Team</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Dropdown
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="#">Action</a></li>
-                      <li><a class="dropdown-item" href="#">Another action</a></li>
-                      <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                  </li>
-                </ul>
-                <form class="d-flex">
-                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                  <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
-              </div>
-            </div>
-          </nav>
-
+      
+      <nav class="navbar navbar-expand-lg navbar-light bg-info">
         <div class="container-fluid">
-          <div class="row">
-            <div class="col-3">
-              <div class="dropdown">
-                <button class="btn btn-danger btn-lg dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown button
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" onchange="buildChart(this.value)">
-                  <li><a class="dropdown-item" value="bug">Bug</li>
-                  <li><a class="dropdown-item" value="dark">Dark</li>
-                  <li><a class="dropdown-item" value="dragon">Dragon</li>
-                  <li><a class="dropdown-item" value="electric">Electric</li>
-                  <li><a class="dropdown-item" value="fairy">Fairy</li>
-                  <li><a class="dropdown-item" value="fighting">Fighting</li>
-                  <li><a class="dropdown-item" value="fire">Fire</li>
-                  <li><a class="dropdown-item" value="flying">Flying</li>
-                  <li><a class="dropdown-item" value="ghost">Ghost</li>
-                  <li><a class="dropdown-item" value="grass">Grass</li>
-                  <li><a class="dropdown-item" value="ground">Ground</li>
-                  <li><a class="dropdown-item" value="ice">Ice</li>
-                  <li><a class="dropdown-item" value="normal">Normal</li>
-                  <li><a class="dropdown-item" value="poison">Poison</li>
-                  <li><a class="dropdown-item" value="psychic">Psychic</li>
-                  <li><a class="dropdown-item" value="rock">Rock</li>
-                  <li><a class="dropdown-item" value="steel">Steel</li>
-                  <li><a class="dropdown-item" value="water">Water</li>
+          <a class="navbar-brand" href="#">Pokemon Dream Team</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
                 </ul>
-              </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+      <div class="container-fluid">
+        <!-- <div class="row">
+          <div class="col">
+            <div class="dropdown">
+              <button class="btn btn-danger dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                Generation
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" onchange="buildChart(this.value)">
+                <li><a class="dropdown-item" value="1">Generation I</li>
+                <li><a class="dropdown-item" value="2">Generation II</li>
+                <li><a class="dropdown-item" value="3">Generation III</li>
+                <li><a class="dropdown-item" value="4">Generation IV</li>
+                <li><a class="dropdown-item" value="5">Generation V</li>
+                <li><a class="dropdown-item" value="6">Generation VI</li>
+                <li><a class="dropdown-item" value="7">Generation VII</li>
+              </ul>
             </div>
-            <div class="col-9">
-              <div id="chart">
-                  <h1>Hello!</h1>
-              </div>
-            
+          </div> -->
+
+          <div class="col">
+            <div class="dropdown">
+              <button class="btn btn-danger dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                Type
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" onchange="buildChart(this.value)">
+                <li><a class="dropdown-item" value="bug">Bug</li>
+                <li><a class="dropdown-item" value="dark">Dark</li>
+                <li><a class="dropdown-item" value="dragon">Dragon</li>
+                <li><a class="dropdown-item" value="electric">Electric</li>
+                <li><a class="dropdown-item" value="fairy">Fairy</li>
+                <li><a class="dropdown-item" value="fighting">Fighting</li>
+                <li><a class="dropdown-item" value="fire">Fire</li>
+                <li><a class="dropdown-item" value="flying">Flying</li>
+                <li><a class="dropdown-item" value="ghost">Ghost</li>
+                <li><a class="dropdown-item" value="grass">Grass</li>
+                <li><a class="dropdown-item" value="ground">Ground</li>
+                <li><a class="dropdown-item" value="ice">Ice</li>
+                <li><a class="dropdown-item" value="normal">Normal</li>
+                <li><a class="dropdown-item" value="poison">Poison</li>
+                <li><a class="dropdown-item" value="psychic">Psychic</li>
+                <li><a class="dropdown-item" value="rock">Rock</li>
+                <li><a class="dropdown-item" value="steel">Steel</li>
+                <li><a class="dropdown-item" value="water">Water</li>
+              </ul>
             </div>
           </div>
         </div>
+      </div>
+
+      <div class="container-fluid">
+        <div class="row">  
+          <div class="col">
+            <div id="chart"></div>
+          </div>
+        </div>
+      </div>
         
-        <script src="/static/js/main.js"></script>
-        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+      <script src="/static/js/main.js"></script>
+      <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     </body>
 </html>
