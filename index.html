@@ -10,6 +10,8 @@
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+        <script src="https://cdn.plot.ly/plotly-2.2.0.min.js"></script>
     </head>
     <body>
         <!-- Responsive navbar-->
@@ -42,9 +44,22 @@
                 <p>Select your Pokemon</p>
             </div>
         </div>
+    
+              <div class="ScatterPolar" data-num="0">
+                <div class="plot" id="plotdiv"></div>
+                <div class="control-row">
+                  Pokemon: <select class="pokedata">
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
+    
+
+       
+        <script src="plots.js"></script>
     </body>
 </html>
