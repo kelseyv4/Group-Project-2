@@ -10,14 +10,14 @@
         
         <link rel="stylesheet" href="/static/css/style.css">
 
-        <script src="https://d3js.org/d3.v7.min.js"></script>
+        <script src="https://d3js.org/d3.v5.min.js"></script>
 
         <title>Intra-Type Comparison</title>
     </head>
 
     <body>
       
-      <nav class="navbar navbar-expand-lg navbar-light bg-info">
+      <nav class="navbar navbar-expand-lg navbar-light bg-danger">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">Pokemon Dream Team</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -48,35 +48,32 @@
             </ul>
             <form class="d-flex">
               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
+              <button class="btn btn-outline-dark" type="submit">Search</button>
             </form>
           </div>
         </div>
       </nav>
 
       <div class="container-fluid">
-        <!-- <div class="row">
-          <div class="col">
-            <div class="dropdown">
-              <button class="btn btn-danger dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                Generation
-              </button>
-              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" onchange="buildChart(this.value)">
-                <li><a class="dropdown-item" value="1">Generation I</li>
-                <li><a class="dropdown-item" value="2">Generation II</li>
-                <li><a class="dropdown-item" value="3">Generation III</li>
-                <li><a class="dropdown-item" value="4">Generation IV</li>
-                <li><a class="dropdown-item" value="5">Generation V</li>
-                <li><a class="dropdown-item" value="6">Generation VI</li>
-                <li><a class="dropdown-item" value="7">Generation VII</li>
-              </ul>
-            </div>
-          </div> -->
-
-          <div class="col">
+        <div class="row">
+          <div class="col float-start border m-2 p-2">
             <label for="type">Select Type:</label>
 
-            <select name="type" id="type_menu">
+              <select name="type" id="gen_menu" onchange="updateChart(this.value)">
+                <option value="1">Generation I</option>
+                <option value="2">Generation II</option>
+                <option value="3">Generation III</option>
+                <option value="4">Generation IV</option>
+                <option value="5">Generation V</option>
+                <option value="6">Generation VI</option>
+                <option value="7">Generation VII</option>
+              </select>
+          </div>
+
+          <div class="col float-end border m-2 p-2">
+            <label for="type">Select Type:</label>
+
+            <select name="type" id="type_menu" onchange="updateChart(this.value)">
               <option value="bug">Bug</option>
               <option value="dark">Dark</option>
               <option value="dragon">Dragon</option>
@@ -95,40 +92,14 @@
               <option value="rock">Rock</option>
               <option value="steel">Steel</option>
               <option value="water">Water</option>
-
             </select>
-            <!-- <div class="dropdown"> -->
-              <!-- <button class="btn btn-danger dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                Type
-              </button>
-              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" >
-                <li><a class="dropdown-item" value="bug" onchange="updateChart(this.value)">Bug</li>
-                <li><a class="dropdown-item" value="dark" onchange="updateChart(this.value)">Dark</li>
-                <li><a class="dropdown-item" value="dragon" onchange="updateChart(this.value)">Dragon</li>
-                <li><a class="dropdown-item" value="electric" onchange="updateChart(this.value)">Electric</li>
-                <li><a class="dropdown-item" value="fairy" onchange="updateChart(this.value)">Fairy</li>
-                <li><a class="dropdown-item" value="fighting" onchange="updateChart(this.value)">Fighting</li>
-                <li><a class="dropdown-item" value="fire" onchange="updateChart(this.value)">Fire</li>
-                <li><a class="dropdown-item" value="flying" onchange="updateChart(this.value)">Flying</li>
-                <li><a class="dropdown-item" value="ghost" onchange="updateChart(this.value)">Ghost</li>
-                <li><a class="dropdown-item" value="grass" onchange="updateChart(this.value)">Grass</li>
-                <li><a class="dropdown-item" value="ground" onchange="updateChart(this.value)">Ground</li>
-                <li><a class="dropdown-item" value="ice" onchange="updateChart(this.value)">Ice</li>
-                <li><a class="dropdown-item" value="normal" onchange="updateChart(this.value)">Normal</li>
-                <li><a class="dropdown-item" value="poison" onchange="updateChart(this.value)">Poison</li>
-                <li><a class="dropdown-item" value="psychic" onchange="updateChart(this.value)">Psychic</li>
-                <li><a class="dropdown-item" value="rock" onchange="updateChart(this.value)">Rock</li>
-                <li><a class="dropdown-item" value="steel" onchange="updateChart(this.value)">Steel</li>
-                <li><a class="dropdown-item" value="water" onchange="updateChart(this.value)">Water</li> -->
-              </ul>
-            </div>
           </div>
         </div>
-      </div>
+      </div>        
 
-      <div class="container-fluid">
+      <div class="container-fluid border">
         <div class="row">  
-          <div class="col">
+          <div class="col m-2 p-2">
             <div id="chart"></div>
           </div>
         </div>
