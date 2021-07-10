@@ -11,8 +11,20 @@ function init() {
 }
 
 function buildChart(data) {
-    var dropdown = d3.select("#type_menu")
-    var menu_type = dropdown.property("value")
+    var gen_dropdown = d3.select("#gen_menu")
+    var menu_gen = gen_dropdown.property("value")
+
+    var gen_list = []
+    
+
+    data.forEach(item => {
+        if (item.generation === Number(menu_gen)) {
+            gen_list.push(item)
+        }
+    })
+
+    var type_dropdown = d3.select("#type_menu")
+    var menu_type = type_dropdown.property("value")
 
     var name = []
     var atk = []
@@ -20,9 +32,9 @@ function buildChart(data) {
     var hp = []
     var spatk = []
     var spdef = []
-    var spd = [] 
-  
-    data.forEach(item => {
+    var spd = []
+
+    gen_list.forEach(item => {
         if (item.type1 === menu_type | item.type2 === menu_type) {
             // console.log(item)         
             
@@ -188,7 +200,7 @@ function buildChart(data) {
 function eventHandler() {
     var dropdown = d3.select("#type_menu")
     var menu_type = dropdown.property("value")
-    console.log(menu_type)
+    // console.log(menu_type)
 
     dropdown.on("change",updateChart())    
 }
@@ -203,5 +215,19 @@ function updateChart() {
     buildChart(poke_data)
     })
 }
+
+// function genCapture(data) {
+//     var gen_dropdown = d3.select("#gen_menu")
+//     var menu_gen = gen_dropdown.property("value")
+
+//     var gen_list = []
+
+//     data.forEach(item => {
+//         if (item.generation === menu_gen) {
+//             gen_list.push(item)
+//         }
+//     })
+
+// }
 
 init()

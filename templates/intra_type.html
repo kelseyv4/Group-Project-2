@@ -25,15 +25,9 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <!-- <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li> -->
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown
+                  Menu
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li><a class="dropdown-item" href="#">Action</a></li>
@@ -42,14 +36,7 @@
                   <li><a class="dropdown-item" href="#">Something else here</a></li>
                 </ul>
               </li>
-              <!-- <li class="nav-item">
-                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-              </li> -->
             </ul>
-            <!-- <form class="d-flex">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-dark" type="submit">Search</button>
-            </form> -->
           </div>
         </div>
       </nav>
@@ -57,9 +44,9 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col bg-white float-start border m-2 p-2">
-            <label for="type">Select Type:</label>
+            <label for="type">Select Generation:</label>
 
-              <select name="type" id="gen_menu" onchange="updateChart(this.value)">
+              <select name="type" id="gen_menu" >
                 <option value="1">Generation I</option>
                 <option value="2">Generation II</option>
                 <option value="3">Generation III</option>
