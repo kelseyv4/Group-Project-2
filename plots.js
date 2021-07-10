@@ -33,7 +33,7 @@ function init(){
   
 
 
-    var select = document.getElementById("selectNumber"); 
+    
     
    
 
@@ -65,11 +65,18 @@ function init(){
 
 
     };
-
+    var select = document.getElementById("selectPoke"); 
+    for (let i = 0; i < poke_names.length; i++) {
+        var opt = poke_names[i]
+        var el = document.createElement("option");
+        el.textContent = opt;
+        el.value = opt;
+        select.add(el);
 
       
 
-    })}
+    };
+})}
 
 
 init()
@@ -209,18 +216,18 @@ function buildPlot(){
             r: [42, 54, 21, 11, 26, 33],
             theta: ['HP','Attack','Defense', 'Sp. Atk', 'Sp. Def', 'Speed'],
             fill: 'toself',
-            fillcolor: "#C22E28" ,
+            fillcolor: "#0d6efd" ,
             name: "pokemon 1"
         };
-        /*  var trace2 =
+          var trace2 =
         {
             type: 'scatterpolar',
-            r: [PokemonTwo.hp, PokemonTwo.attack, PokemonTwo.defense, PokemonTwo.sp_attack, PokemonTwo.sp_defense, PokemonTwo.speed],
+            r: [21, 16, 78, 55, 26, 43],
             theta: ['HP','Attack','Defense', 'Sp. Atk', 'Sp. Def', 'Speed'],
             fill: 'toself',
-            fillcolor: "#EE8130"  ,
-            name: PokemonTwo
-    }; */
+            fillcolor: "#ffc1070"  ,
+            name: "pokemon 2"
+    }; 
        // var trace3 =
         /* {
             type: 'scatterpolar',
@@ -260,7 +267,7 @@ function buildPlot(){
             name: 'Pokemone 6'
             }
      */
-    var data = [trace1];
+    var data = [trace1, trace2];
     
     layout = {
         title: 'Pokemon Dream Team',
@@ -284,6 +291,9 @@ function buildPlot(){
         var selected_pokemon = dropdownMenu.property("value"); 
         console.log(selected_pokemon)
 
+        
+    
+
         var index = poke_names.indexOf(selected_pokemon)
         var hp = poke_hp[index]
         var attack = poke_attack[index]  
@@ -292,20 +302,47 @@ function buildPlot(){
         var sp_defense = poke_sp_defense[index]
         var speed = poke_speed[index]
 
-        console.log(speed)
         
-        Plotly.restyle("plotdiv", "name", [selected_pokemon]);
-        Plotly.restyle("plotdiv", "r[0]", [hp]);
-        Plotly.restyle("plotdiv", "r[1]", [attack]);
-        Plotly.restyle("plotdiv", "r[2]", [defense]);
-        Plotly.restyle("plotdiv", "r[3]", [sp_attack]);
-        Plotly.restyle("plotdiv", "r[4]", [sp_defense]);
-        Plotly.restyle("plotdiv", "r[5]", [speed]);
+
+        
+        
+        Plotly.restyle("plotdiv", "name", [selected_pokemon],[0]);
+        Plotly.restyle("plotdiv", "r[0]", [hp],[0]);
+        Plotly.restyle("plotdiv", "r[1]", [attack],[0]);
+        Plotly.restyle("plotdiv", "r[2]", [defense],[0]);
+        Plotly.restyle("plotdiv", "r[3]", [sp_attack],[0]);
+        Plotly.restyle("plotdiv", "r[4]", [sp_defense],[0]);
+        Plotly.restyle("plotdiv", "r[5]", [speed],[0]);
 
 
     }
+    d3.selectAll("#selectPoke").on("change", updatePokemon2);
+
+    function updatePokemon2() {
+        // Use D3 to select the dropdown menu
+        var dropdownMenu2 = d3.select("#selectPoke");
+        // Assign the value of the dropdown menu option to a variable
+        var selected_pokemon2 = dropdownMenu2.property("value"); 
+        console.log(selected_pokemon2)
+        var index2 = poke_names.indexOf(selected_pokemon2)
+        var hp2 = poke_hp[index2]
+        var attack2 = poke_attack[index2]  
+        var defense2 = poke_defense[index2] 
+        var sp_attack2 = poke_sp_attack[index2] 
+        var sp_defense2 = poke_sp_defense[index2]
+        var speed2 = poke_speed[index2]
+
+    console.log(speed2)
 
 
+        Plotly.restyle("plotdiv", "name", [selected_pokemon2], [1]);
+        Plotly.restyle("plotdiv", "r[0]", [hp2],[1]);
+        Plotly.restyle("plotdiv", "r[1]", [attack2],[1]);
+        Plotly.restyle("plotdiv", "r[2]", [defense2],[1]);
+        Plotly.restyle("plotdiv", "r[3]", [sp_attack2],[1]);
+        Plotly.restyle("plotdiv", "r[4]", [sp_defense2],[1]);
+        Plotly.restyle("plotdiv", "r[5]", [speed2],[1]);
+    }    
 
 
 
@@ -332,4 +369,4 @@ function buildPlot(){
 /* } */
     // data.forEach((name)) => 
 //
- 
+    
