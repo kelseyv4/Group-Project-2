@@ -12,6 +12,7 @@
         <link href="css/styles.css" rel="stylesheet" />
         <script src="https://d3js.org/d3.v7.min.js"></script>
         <script src="https://cdn.plot.ly/plotly-2.2.0.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     </head>
     <body>
         <!-- Responsive navbar-->
@@ -39,18 +40,22 @@
         <!-- Page content-->
         <div class="container">
             <div class="text-center mt-5">
-                <h1>Radar Chart</h1>
-                <p class="lead">Create a Pokemon dream team with this radar chart!</p>
+                <h1>Scatter Polar</h1>
+                <p class="lead">Create a Pokemon dream team with this scatter polar chart!</p>
                 <p>Select your Pokemon</p>
             </div>
         </div>
-    
+        <form id="myForm">
+            <select id="selectNumber">
+              <option>Choose a Pokemon</option>
+            </select>
+          </form>
+            Pokemon 2: <select class="pokedata">
+            </select>
+          </div>
               <div class="ScatterPolar" data-num="0">
                 <div class="plot" id="plotdiv"></div>
-                <div class="control-row">
-                  Pokemon: <select class="pokedata">
-                  </select>
-                </div>
+                
               </div>
             </div>
           </div>
