@@ -25,12 +25,12 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
+              <!-- <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Link</a>
-              </li>
+              </li> -->
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Dropdown
@@ -42,21 +42,21 @@
                   <li><a class="dropdown-item" href="#">Something else here</a></li>
                 </ul>
               </li>
-              <li class="nav-item">
+              <!-- <li class="nav-item">
                 <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-              </li>
+              </li> -->
             </ul>
-            <form class="d-flex">
+            <!-- <form class="d-flex">
               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
               <button class="btn btn-outline-dark" type="submit">Search</button>
-            </form>
+            </form> -->
           </div>
         </div>
       </nav>
 
       <div class="container-fluid">
         <div class="row">
-          <div class="col float-start border m-2 p-2">
+          <div class="col bg-white float-start border m-2 p-2">
             <label for="type">Select Type:</label>
 
               <select name="type" id="gen_menu" onchange="updateChart(this.value)">
@@ -70,7 +70,7 @@
               </select>
           </div>
 
-          <div class="col float-end border m-2 p-2">
+          <div class="col bg-white float-end border m-2 p-2">
             <label for="type">Select Type:</label>
 
             <select name="type" id="type_menu" onchange="updateChart(this.value)">
@@ -97,7 +97,7 @@
         </div>
       </div>        
 
-      <div class="container-fluid border">
+      <div class="container-fluid bg-white">
         <div class="row">  
           <div class="col m-2 p-2">
             <div id="chart"></div>

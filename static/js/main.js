@@ -143,7 +143,7 @@ function buildChart(data) {
     layout = {
         
         xaxis: {
-            showgrid: false,
+            showgrid: true,
             showline: true,
             linecolor: 'rgb(102, 102, 102)',
             titlefont: {
