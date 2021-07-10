@@ -46,7 +46,7 @@
           <div class="col bg-white float-start border m-2 p-2">
             <label for="type">Select Generation:</label>
 
-              <select name="type" id="gen_menu" >
+              <select name="type" id="gen_menu" onchange="updateChart(this.value)">
                 <option value="1">Generation I</option>
                 <option value="2">Generation II</option>
                 <option value="3">Generation III</option>

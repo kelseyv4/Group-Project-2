@@ -5,7 +5,9 @@ function init() {
 
     buildChart(poke_data)
 
-    eventHandler()
+    typeEventHandler()
+
+    genEventHandler()
 
     })
 }
@@ -197,8 +199,16 @@ function buildChart(data) {
     
 }
 
-function eventHandler() {
+function typeEventHandler() {
     var dropdown = d3.select("#type_menu")
+    var menu_type = dropdown.property("value")
+    // console.log(menu_type)
+
+    dropdown.on("change",updateChart())    
+}
+
+function genEventHandler() {
+    var dropdown = d3.select("#gen_menu")
     var menu_type = dropdown.property("value")
     // console.log(menu_type)
 
