@@ -518,13 +518,28 @@ var layout = {
 // Plot the chart
 Plotly.newPlot("barchart", data, layout);
 
-// ****************/
+//****************/
 
 // Initializes the page with a default plot
 function init() {
   data = [{
     x: xvaluesAll,
-    y: yvaluesAll }];
+    y: yvaluesAll,
+    marker: {
+      color: ['#A6B91A', '#705746', '#6F35FC', '#F7D02C',
+        '#D685AD', '#C22E28', '#EE8130', '#A98FF3', '#735797',
+        '#7AC74C', '#E2BF65', '#96D9D6', '#A8A77A', '#A33EA1',
+        '#F95587', '#B6A136', '#B7B7CE', '#6390F0']
+    },
+    type: "bar" }];
+
+  var layout = {
+    barmode: 'stack',
+    title: "Pokemon Types by Generation",
+    xaxis: { title: "Type of Pokemon" },
+    yaxis: { title: "Number of Pokemon" }
+
+  };  
 
   // var CHART = d3.selectAll("#plot").node();
 
