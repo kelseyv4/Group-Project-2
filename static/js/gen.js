@@ -1,10 +1,10 @@
-// function init() {
+function init() {
 
-//   d3.json("/api/notes/postgres").then(data => {
-//     var PokemonCleanData = data
-//     console.log(PokemonCleanData)
-//   })
-// }
+  d3.json("/api/notes/postgres").then(data => {
+    var PokemonCleanData = data
+    console.log(PokemonCleanData)
+
+
 
 //*****All*****
 
@@ -607,6 +607,7 @@ function updatePlotly() {
   Plotly.restyle("barchart", "x", [x]);
   Plotly.restyle("barchart", "y", [y]);
 }
-
+})
+}
 init();
 

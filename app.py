@@ -110,5 +110,21 @@ def note_postgres():
         })
     return jsonify(data)
 
+@app.route("/about")
+def about():
+    return render_template("about.html")
+
+@app.route("/generation")
+def generation():
+    return render_template("gen.html")
+
+@app.route("/team")
+def team():
+    return render_template("team.html")
+
+@app.route("/type")
+def type():
+    return render_template("type.html")
+
 if __name__ == "__main__":
     app.run(debug=True)

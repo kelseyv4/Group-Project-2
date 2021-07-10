@@ -6,12 +6,20 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Pokemon Bar Chart</title>
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>        
+  <link rel="stylesheet" href="/static/css/type_style.css">
+  <!-- Favicon-->
+  <link rel="icon" type="image/x-icon" href="assets/pokeball.png" />
+  <div>Icons made by <a href="https://www.flaticon.com/authors/those-icons" title="Those Icons">Those Icons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+
+
 </head>
 <body>
   <div id="barchart"></div>
   <script src="https://d3js.org/d3.v5.min.js"></script>
-  <script src="pokemon_clean.js"></script>
-  <script src="gen.js"></script>
+  <!-- <script src="pokemon_clean.js"></script> -->
+  <!-- <script src="gen.js"></script> -->
 
   <select id="selDataset">
     <option value="PokemonGenAll">Pokemon All Generations</option>
@@ -23,6 +31,6 @@
     <option value="PokemonGen6">Pokemon Generation 6</option>
     <option value="PokemonGen7">Pokemon Generation 7</option>
   </select>
-
+  <script src="/static/js/gen.js"></script>
 </body>
 </html>

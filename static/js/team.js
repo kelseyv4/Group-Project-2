@@ -14,7 +14,7 @@ var poke_sp_defense = []
 var poke_speed = []
 
 function init(){
-    d3.json("https://pokedreamteam.herokuapp.com/api/notes/postgres").then(data => {
+    d3.json("/api/notes/postgres").then(data => {
         var poke_data = data
         
 
