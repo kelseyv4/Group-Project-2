@@ -61,7 +61,7 @@ class pokemon(db.Model):
 
 @app.route("/")
 def index():
-    return "This is where our Pokemon Dashboard will be!"
+    return render_template("home.html")
 
 @app.route('/api/notes/postgres')
 def note_postgres():

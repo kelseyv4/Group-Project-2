@@ -3,8 +3,8 @@ function init() {
   d3.json("/api/notes/postgres").then(data => {
     var PokemonCleanData = data
     console.log(PokemonCleanData)
-
-
+  })
+}
 
 //*****All*****
 
@@ -600,6 +600,11 @@ function updatePlotly() {
       y = yvalues7;
       break;
 
+    case "PokemonGenAll":
+      x = xvaluesAll;
+      y = yvaluesAll;
+      break;
+
 }
 
 
@@ -607,7 +612,6 @@ function updatePlotly() {
   Plotly.restyle("barchart", "x", [x]);
   Plotly.restyle("barchart", "y", [y]);
 }
-})
-}
+
 init();
 
