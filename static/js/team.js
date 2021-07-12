@@ -14,7 +14,7 @@ var poke_sp_defense = []
 var poke_speed = []
 
 function init(){
-    d3.json("/api/notes/postgres").then(data => {
+    d3.json('/api/notes/postgres').then(data => {
         var poke_data = data
         
 
@@ -66,6 +66,50 @@ function init(){
 
     };
     var select = document.getElementById("selectPoke"); 
+    for (let i = 0; i < poke_names.length; i++) {
+        var opt = poke_names[i]
+        var el = document.createElement("option");
+        el.textContent = opt;
+        el.value = opt;
+        select.add(el);
+
+      
+
+    };
+    var select = document.getElementById("selectPoke3"); 
+    for (let i = 0; i < poke_names.length; i++) {
+        var opt = poke_names[i]
+        var el = document.createElement("option");
+        el.textContent = opt;
+        el.value = opt;
+        select.add(el);
+
+      
+
+    };
+    var select = document.getElementById("selectPoke4"); 
+    for (let i = 0; i < poke_names.length; i++) {
+        var opt = poke_names[i]
+        var el = document.createElement("option");
+        el.textContent = opt;
+        el.value = opt;
+        select.add(el);
+
+      
+
+    };
+    var select = document.getElementById("selectPoke5"); 
+    for (let i = 0; i < poke_names.length; i++) {
+        var opt = poke_names[i]
+        var el = document.createElement("option");
+        el.textContent = opt;
+        el.value = opt;
+        select.add(el);
+
+      
+
+    };
+    var select = document.getElementById("selectPoke6"); 
     for (let i = 0; i < poke_names.length; i++) {
         var opt = poke_names[i]
         var el = document.createElement("option");
@@ -228,46 +272,46 @@ function buildPlot(){
             fillcolor: "#ffc1070"  ,
             name: "pokemon 2"
     }; 
-       // var trace3 =
-        /* {
+          var trace3 =
+         {
             type: 'scatterpolar',
-            r: [currentHP, currentAttack, currentDefense, currentSP_attack, currentSP_defense, currentSpeed],
+            r: [55, 32, 82, 11, 94, 22],
             theta: ['HP','Attack','Defense', 'Sp. Atk', 'Sp. Def', 'Speed'],
             fill: 'toself',
-            fillcolor: "#7AC74C",
+            fillcolor: "green",
             name: 'Pokemon 3'
         };
         var trace4 =
         {
             type: 'scatterpolar',
-            r: [currentHP, currentAttack, currentDefense, currentSP_attack, currentSP_defense, currentSpeed],
+            r: [11, 86, 25, 16, 44, 80],
             theta: ['HP','Attack','Defense', 'Sp. Atk', 'Sp. Def', 'Speed'],
             fill: 'toself',
-            fillcolor: "#A33EA1"  ,
+            fillcolor: "red"  ,
             name: 'Pokemon 4'
             };
 
         var trace5 =
         {
             type: 'scatterpolar',
-            r: [currentHP, currentAttack, currentDefense, currentSP_attack, currentSP_defense, currentSpeed],
+            r: [56, 31, 94, 57, 13, 29],
             theta: ['HP','Attack','Defense', 'Sp. Atk', 'Sp. Def', 'Speed'],
             fill: 'toself',
-            fillcolor: "#6390F0"  ,
+            fillcolor: "purple"  ,
             name: 'Pokemon 5'
     }
 
         var trace6 =
         {
             type: 'scatterpolar',
-            r: [currentHP, currentAttack, currentDefense, currentSP_attack, currentSP_defense, currentSpeed],
+            r: [64, 92, 18, 34, 23, 39],
             theta: ['HP','Attack','Defense', 'Sp. Atk', 'Sp. Def', 'Speed'],
             fill: 'toself',
-            fillcolor: "#B6A136"  ,
+            fillcolor: "yellow",
             name: 'Pokemone 6'
             }
-     */
-    var data = [trace1, trace2];
+     
+    var data = [trace1, trace2, trace3, trace4, trace5, trace6];
     
     layout = {
         title: 'Pokemon Dream Team',
@@ -344,8 +388,140 @@ function buildPlot(){
         Plotly.restyle("plotdiv", "r[5]", [speed2],[1]);
     }    
 
+    d3.selectAll("#selectPoke3").on("change", updatePokemon3);
+
+    function updatePokemon3() {
+        // Use D3 to select the dropdown menu
+        var dropdownMenu3 = d3.select("#selectPoke3");
+        // Assign the value of the dropdown menu option to a variable
+        var selected_pokemon3 = dropdownMenu3.property("value"); 
+        console.log(selected_pokemon3)
+    
+        var index3 = poke_names.indexOf(selected_pokemon3)
+        var hp3 = poke_hp[index3]
+        var attack3 = poke_attack[index3]  
+        var defense3 = poke_defense[index3] 
+        var sp_attack3 = poke_sp_attack[index3] 
+        var sp_defense3 = poke_sp_defense[index3]
+        var speed3 = poke_speed[index3]
+    
+    console.log(speed3)
 
 
+        Plotly.restyle("plotdiv", "name", [selected_pokemon3], [2]);
+        Plotly.restyle("plotdiv", "r[0]", [hp3],[2]);
+        Plotly.restyle("plotdiv", "r[1]", [attack3],[2]);
+        Plotly.restyle("plotdiv", "r[2]", [defense3],[2]);
+        Plotly.restyle("plotdiv", "r[3]", [sp_attack3],[2]);
+        Plotly.restyle("plotdiv", "r[4]", [sp_defense3],[2]);
+        Plotly.restyle("plotdiv", "r[5]", [speed3],[2]);
+    }
+ 
+    d3.selectAll("#selectPoke4").on("change", updatePokemon4);
+
+    function updatePokemon4() {
+        // Use D3 to select the dropdown menu
+        var dropdownMenu = d3.select("#selectPoke4");
+        // Assign the value of the dropdown menu option to a variable
+        var selected_pokemon = dropdownMenu.property("value"); 
+        console.log(selected_pokemon)
+
+        
+    
+
+        var index = poke_names.indexOf(selected_pokemon)
+        var hp = poke_hp[index]
+        var attack = poke_attack[index]  
+        var defense = poke_defense[index] 
+        var sp_attack = poke_sp_attack[index] 
+        var sp_defense = poke_sp_defense[index]
+        var speed = poke_speed[index]
+
+        
+
+        
+        
+        Plotly.restyle("plotdiv", "name", [selected_pokemon],[3]);
+        Plotly.restyle("plotdiv", "r[0]", [hp],[3]);
+        Plotly.restyle("plotdiv", "r[1]", [attack],[3]);
+        Plotly.restyle("plotdiv", "r[2]", [defense],[3]);
+        Plotly.restyle("plotdiv", "r[3]", [sp_attack],[3]);
+        Plotly.restyle("plotdiv", "r[4]", [sp_defense],[3]);
+        Plotly.restyle("plotdiv", "r[5]", [speed],[3]);
+
+
+    }
+
+    d3.selectAll("#selectPoke5").on("change", updatePokemon5);
+
+    function updatePokemon5() {
+        // Use D3 to select the dropdown menu
+        var dropdownMenu = d3.select("#selectPoke5");
+        // Assign the value of the dropdown menu option to a variable
+        var selected_pokemon = dropdownMenu.property("value"); 
+        console.log(selected_pokemon)
+
+        
+    
+
+        var index = poke_names.indexOf(selected_pokemon)
+        var hp = poke_hp[index]
+        var attack = poke_attack[index]  
+        var defense = poke_defense[index] 
+        var sp_attack = poke_sp_attack[index] 
+        var sp_defense = poke_sp_defense[index]
+        var speed = poke_speed[index]
+
+        
+
+        
+        
+        Plotly.restyle("plotdiv", "name", [selected_pokemon],[4]);
+        Plotly.restyle("plotdiv", "r[0]", [hp],[4]);
+        Plotly.restyle("plotdiv", "r[1]", [attack],[4]);
+        Plotly.restyle("plotdiv", "r[2]", [defense],[4]);
+        Plotly.restyle("plotdiv", "r[3]", [sp_attack],[4]);
+        Plotly.restyle("plotdiv", "r[4]", [sp_defense],[4]);
+        Plotly.restyle("plotdiv", "r[5]", [speed],[4]);
+
+
+    }
+ 
+    d3.selectAll("#selectPoke6").on("change", updatePokemon6);
+
+    function updatePokemon6() {
+        // Use D3 to select the dropdown menu
+        var dropdownMenu = d3.select("#selectPoke6");
+        // Assign the value of the dropdown menu option to a variable
+        var selected_pokemon = dropdownMenu.property("value"); 
+        console.log(selected_pokemon)
+
+        
+    
+
+        var index = poke_names.indexOf(selected_pokemon)
+        var hp = poke_hp[index]
+        var attack = poke_attack[index]  
+        var defense = poke_defense[index] 
+        var sp_attack = poke_sp_attack[index] 
+        var sp_defense = poke_sp_defense[index]
+        var speed = poke_speed[index]
+
+        
+
+        
+        
+        Plotly.restyle("plotdiv", "name", [selected_pokemon],[5]);
+        Plotly.restyle("plotdiv", "r[0]", [hp],[5]);
+        Plotly.restyle("plotdiv", "r[1]", [attack],[5]);
+        Plotly.restyle("plotdiv", "r[2]", [defense],[5]);
+        Plotly.restyle("plotdiv", "r[3]", [sp_attack],[5]);
+        Plotly.restyle("plotdiv", "r[4]", [sp_defense],[5]);
+        Plotly.restyle("plotdiv", "r[5]", [speed],[5]);
+
+
+    }
+ 
    /*  var innerContainer = document.querySelector('[data-num="0"'),
         plotEl = innerContainer.querySelector('.plot'),
         pokemonSelector = innerContainer.querySelector('.pokedata');
