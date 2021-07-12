@@ -103,5 +103,47 @@
         
       <script src="/static/js/type.js"></script>
       <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+           <!-- <div class="container">
+      <div class="text-center mt-5">
+          <h1>Type Survey</h1> -->
+
+    
+        </div>
+        <style>
+    
+          #box {
+            margin: 0 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgb(42, 117, 187);
+            opacity: 0.2;
+    
+            transition: background-color 0.4s ease-in-out;
+          }
+        </style>
+    
+        <!-- <p>Multiple animations based on mouse movement.</p> -->
+        <div id="box"></div>
+    
+        <script src="../static/js/choreographer.min.js"></script>
+        <script>
+          var choreographer = new Choreographer({
+            animations: [
+              {
+                range: [-1, window.innerWidth],
+                selector: '#box',
+                type: 'scale',
+                style: 'opacity',
+                from: 0.2,
+                to: 1
+              }
+            ]
+          })
+    
+          window.addEventListener('mousemove', function(e) {
+            choreographer.runAnimationsAt(e.clientX)
+          })
+        </script>
+    </body>
     </body>
 </html>

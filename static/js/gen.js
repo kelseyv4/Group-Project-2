@@ -612,6 +612,7 @@ function updatePlotly() {
   Plotly.restyle("barchart", "x", [x]);
   Plotly.restyle("barchart", "y", [y]);
 }
+
 })
 }
 init();
