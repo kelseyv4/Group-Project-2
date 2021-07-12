@@ -308,7 +308,7 @@ function buildPlot(){
             theta: ['HP','Attack','Defense', 'Sp. Atk', 'Sp. Def', 'Speed'],
             fill: 'toself',
             fillcolor: "yellow",
-            name: 'Pokemone 6'
+            name: 'Pokemon 6'
             }
      
     var data = [trace1, trace2, trace3, trace4, trace5, trace6];
